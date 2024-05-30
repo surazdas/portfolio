@@ -21,6 +21,7 @@ const Todo = () => {
       setTasks(JSON.parse(localData));
     }
   }, []);
+  console.log("asdh");
   return (
     <div className={styles.todocontainer}>
       <div className={styles.todocontainer_main}>
