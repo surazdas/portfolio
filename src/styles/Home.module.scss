@@ -1,0 +1,136 @@
+@import "./mixin";
+.home {
+  height: 100vh;
+  position: relative;
+}
+.clip {
+  width: 100%;
+  height: 70px;
+
+  clip-path: polygon(0% 100%, 37% 0%, 74% 100%, 100% 0%, 0% 0%);
+  background-color: #000;
+}
+.body {
+  width: 100%;
+  height: 700px;
+  padding-top: 80px;
+  margin-top: 80px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+
+  &_left {
+    width: 50%;
+    @include center;
+    span {
+      color: #fff;
+
+      font-size: 40px;
+      font-weight: bold;
+      font-style: italic;
+    }
+    &_icon {
+      width: 50px;
+
+      height: 50px;
+    }
+  }
+  &_right {
+    @include center;
+    height: 550px;
+    width: 550px;
+    border-radius: 50%;
+    position: relative;
+    background-color: aqua;
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: auto;
+      height: 600px;
+      width: 550px;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      filter: grayscale(60%);
+      object-fit: cover;
+
+      object-fit: cover;
+      object-position: top;
+      transition: ease all 0.3s;
+    }
+  }
+}
+.medium {
+  width: 100%;
+  height: 700px;
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+
+  &_left {
+    @include center;
+    width: 50%;
+    max-width: 615px;
+    height: 615px;
+    border-radius: 50%;
+    padding: 15px;
+
+    img {
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 13px 10px 43px -6px rgba(0, 0, 0, 0.62);
+    }
+  }
+  &_right {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+
+    margin-left: auto;
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      padding: 40px 0;
+      font-style: italic;
+    }
+
+    width: 40%;
+
+    &_line {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 5px;
+      margin-top: 10px;
+      div {
+        width: 50px;
+        height: 6px;
+        background-color: #000;
+        &:nth-last-of-type(1) {
+          width: 200px;
+          height: 2px;
+          background-color: #000;
+        }
+      }
+    }
+    &_share {
+      display: flex;
+      margin-top: auto;
+      padding: 20px;
+      align-items: center;
+      span {
+        font-size: 30px;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+        &:hover {
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+}
