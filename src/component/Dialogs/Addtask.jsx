@@ -60,7 +60,7 @@ const Addtask = ({
   };
   return (
     <div>
-      Helo
+      
       <Dialog open={open} onClose={handleClose} fullWidth maxWidth={"md"}>
         <DialogTitle className={styles.Dialog}>Add Task</DialogTitle>
         <DialogContent>
